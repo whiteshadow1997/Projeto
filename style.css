@@ -1,0 +1,256 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+header {
+  margin-bottom: 25px;
+}
+
+.subtitulo {
+  max-width: 720px;
+  color: #cccccc;
+}
+
+.subtitulo a {
+  color: #4da3ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.jogo {
+  background: #1c1c1c;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.linha-jogo {
+  display: grid;
+  grid-template-columns: 60px 40px 1fr 40px 1fr 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.hora {
+  text-align: left;
+  font-weight: bold;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background: red;
+}
+
+.time {
+  font-weight: bold;
+}
+
+.x {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.caderneta {
+  margin-top: 15px;
+  display: none;
+}
+
+.caderneta input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.caderneta button {
+  width: 100%;
+  padding: 10px;
+  background: #25d366; /* verde funcional */
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.resultado {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.resultado label {
+  font-size: 14px;
+  cursor: pointer;
+}
+/* ====== OPÇÕES DE RESULTADO (1 / X / 2) ====== */
+
+.opcoes-resultado {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 12px 0;
+  width: 100%;
+}
+
+.opcao {
+  flex: 1;
+  padding: 14px 0;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #fff;
+  border: 2px solid #444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Toque / hover */
+.opcao:hover {
+  background: #333;
+}
+
+/* Resultado selecionado */
+.opcao.ativo {
+  background: #1f6f43;           /* verde fechado */
+  border-color: #2ecc71;
+  color: #fff;
+}
+
+/* ====== INPUT VALOR ====== */
+
+.valor-aposta {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 12px;
+}
+
+/* ====== BOTÃO VALIDAR ====== */
+
+.btn-validar {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #009b3a;          /* verde bandeira */
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+/* Hover */
+.btn-validar:hover {
+  background: #007a2e;
+}
+
+/* Desativado */
+.btn-validar:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+/* Container geral da aposta */
+.aposta {
+  display: flex;
+  gap: 16px;
+}
+
+/* Coluna esquerda (opções + valor + botão) */
+.aposta-coluna {
+  width: 50%;
+}
+
+/* Painel da aposta em duas colunas (DESKTOP) */
+.aposta {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50% / 50% */
+  gap: 20px;
+  align-items: start;
+}
+
+/* Coluna esquerda: times */
+.coluna-times {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajuste fino dos nomes */
+.coluna-times .times {
+  justify-content: center;
+}
+
+/* Garantir que input e botões tenham mesma largura visual */
+.valor-aposta,
+.btn-validar {
+  box-sizing: border-box;
+}
+
+/* Limitar largura da coluna da aposta */
+.aposta-coluna {
+  max-width: 100%;
+}
+/* ====== LINHA HORA + TIMES ====== */
+
+.linha-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.horario {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.times-texto {
+  white-space: nowrap;
+}
+
+/* ====== LINHA TIMES + ESCUDOS ====== */
+
+.linha-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Bloco central dos times */
+.Rnica-linha-times,
+.Rnica-linha-times { /* fallback caso editor remova acento */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Time individual */
+.time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+/* X central */
+.versus {
+  margin: 0 6px;
+}
+
+/* Escudos */
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #444; /* placeholder */
+}
